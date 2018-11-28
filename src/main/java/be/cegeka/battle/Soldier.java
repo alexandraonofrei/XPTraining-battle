@@ -16,6 +16,12 @@ public class Soldier {
         wepon = new Weapon();
     }
 
+    public Soldier(String name, Weapon wepon) {
+        Validate.isTrue(isNotBlank(name));
+        this.name = name;
+        this.wepon = wepon;
+    }
+
     String getName() {
         return this.name;
     }

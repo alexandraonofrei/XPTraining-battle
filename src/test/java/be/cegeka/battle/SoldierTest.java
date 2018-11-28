@@ -58,7 +58,7 @@ public class SoldierTest {
 
         Battle battle = new Battle(attacker, defender);
 
-        assertThat(battle.fight()).isEqualTo("Attacker won the fight");
+        assertThat(battle.fight()).isEqualTo(true);
     }
 
 }

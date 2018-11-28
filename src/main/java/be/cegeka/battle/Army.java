@@ -18,4 +18,9 @@ public class Army {
         return army;
     }
 
+    public void removeFromArmy() {
+        if (army.size() > 0) {
+            army.remove(0);
+        }
+    }
 }
