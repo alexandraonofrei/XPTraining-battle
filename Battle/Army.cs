@@ -6,6 +6,7 @@ namespace Battle
 {
     public class Army
     {
+    //test
         private readonly List<Soldier> _soldiers;
 
         public IHeadquarters Headquarters { get; set; }
