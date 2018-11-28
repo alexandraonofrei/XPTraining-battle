@@ -1,19 +1,29 @@
 package be.cegeka.battle;
 
 public class Battle {
-    private final static String wonMessage = " won the fight";
-    private Soldier attacker;
-    private Soldier defender;
+    public static boolean fight(Soldier attacker, Soldier defender) {
+        if (attacker == null && defender != null) {
+            return false;
+        }
 
-    public Battle(Soldier attacker, Soldier defender) {
-        this.attacker = attacker;
-        this.defender = defender;
-    }
+        if (attacker != null && defender == null) {
+            return true;
+        }
 
-    public boolean fight() {
-        if (attacker.getWepon().getDamage() >= defender.getWepon().getDamage()) {
+        if (attacker == null && defender == null) {
+            return true;
+        }
+
+        if (attacker.getWeapon().getDamage() >= defender.getWeapon().getDamage()) {
             return true;
         }
         return false;
+    }
+
+    public static boolean fightArmies(Army attackerArmy, Army defenderArmy) {
+        Soldier attacker = attackerArmy.getFighterSoldier();
+        Soldier defender = defenderArmy.getFighterSoldier();
+
+        return fight(attacker, defender);
     }
 }

@@ -23,4 +23,12 @@ public class Army {
             army.remove(0);
         }
     }
+
+    public Soldier getFighterSoldier() {
+        if (army.size() > 0) {
+            return army.get(0);
+        }
+
+        return null;
+    }
 }

@@ -6,32 +6,32 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 public class Soldier {
     private String name;
-    private Weapon wepon;
+    private Weapon weapon;
     private String id;
 
     public Soldier(String name) {
         Validate.isTrue(isNotBlank(name));
 
         this.name = name;
-        wepon = new Weapon();
+        weapon = new Weapon();
     }
 
     public Soldier(String name, Weapon wepon) {
         Validate.isTrue(isNotBlank(name));
         this.name = name;
-        this.wepon = wepon;
+        this.weapon = wepon;
     }
 
     String getName() {
         return this.name;
     }
 
-    public Weapon getWepon() {
-        return wepon;
+    public Weapon getWeapon() {
+        return weapon;
     }
 
-    public void setWepon(Weapon wepon) {
-        this.wepon = wepon;
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 
     public String getId() {
