@@ -50,4 +50,22 @@ public class SoldierTest {
 
         assertThat(soldier.getWepon().getDamage()).isEqualTo(5);
     }
+
+    @Test
+    public void construction_AsAttackerKillsDefender() {
+        Soldier attacker = new Soldier("Attacker");
+        Soldier defender = new Soldier("Defender");
+
+        Battle battle = new Battle(attacker, defender);
+
+        assertThat(battle.fight()).isEqualTo("Attacker won the fight");
+    }
+
+//    @Test
+//    public void construction_Army() {
+//        Soldier soldier1 = new Soldier("Soldier1");
+//        Soldier soldier2 = new Soldier("Soldier2");
+//
+//        Army army = new Army()
+//    }
 }
