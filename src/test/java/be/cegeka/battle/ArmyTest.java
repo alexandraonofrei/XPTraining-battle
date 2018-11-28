@@ -16,4 +16,14 @@ public class ArmyTest {
 
         assertThat(army.getArmy().size()).isEqualTo(2);
     }
+
+    @Test
+    public void construction_HeadquarterEnrollSoldier() {
+        Army army = new Army();
+        Soldier soldier1 = new Soldier("Soldier1");
+        army.enroll(soldier1);
+
+        assertThat(soldier1.getId()).isEqualTo("100Soldier1");
+
+    }
 }
