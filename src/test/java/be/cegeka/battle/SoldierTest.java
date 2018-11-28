@@ -61,9 +61,4 @@ public class SoldierTest {
         assertThat(battle.fight()).isEqualTo("Attacker won the fight");
     }
 
-    @Test
-    public void construction_Army() {
-        Soldier soldier1 = new Soldier("Soldier1");
-        Soldier soldier2 = new Soldier("Soldier2");
-    }
 }
