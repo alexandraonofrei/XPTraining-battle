@@ -5,7 +5,7 @@ import org.apache.commons.lang3.Validate;
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 public class Soldier {
-
+// test 1
     private String name;
 
     public Soldier(String name) {
