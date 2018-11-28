@@ -28,4 +28,26 @@ public class SoldierTest {
         new Soldier("   ");
     }
 
+    @Test
+    public void construction_ASoldierMustHaveADefaultBareFitWeponType() {
+        Soldier soldier = new Soldier("Bubbles");
+
+        assertThat(soldier.getWepon().getWeaponType()).isEqualTo(WeaponType.BareFist);
+    }
+
+    @Test
+    public void construction_ASoldierMustReturn_Correct_WeaponType_When_WeaponType_IsSpecified() {
+        Soldier soldier = new Soldier("Bubbles");
+        soldier.setWepon(new Weapon(WeaponType.Axe, 5));
+
+        assertThat(soldier.getWepon().getWeaponType()).isEqualTo(WeaponType.Axe);
+    }
+
+    @Test
+    public void construction_ASoldierMustReturn_Correct_Damage_When_Damage_IsSpecified() {
+        Soldier soldier = new Soldier("Bubbles");
+        soldier.setWepon(new Weapon(WeaponType.Axe, 5));
+
+        assertThat(soldier.getWepon().getDamage()).isEqualTo(5);
+    }
 }

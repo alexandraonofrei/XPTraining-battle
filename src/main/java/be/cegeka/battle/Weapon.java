@@ -1,15 +1,24 @@
 package be.cegeka.battle;
 
 public class Weapon {
-    public String name;
+    public WeaponType weaponType;
     public int damage;
 
-    public String getName() {
-        return name;
+    public Weapon() {
+        this.weaponType = WeaponType.BareFist;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Weapon(WeaponType weaponType, int damage) {
+        this.weaponType = weaponType;
+        this.damage = damage;
+    }
+
+    public WeaponType getWeaponType() {
+        return weaponType;
+    }
+
+    public void setWeaponType(WeaponType weaponType) {
+        this.weaponType = weaponType;
     }
 
     public int getDamage() {
